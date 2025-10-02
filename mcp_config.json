@@ -1,0 +1,50 @@
+{
+  "mcpServers": {
+    "pcap-analyzer": {
+      "command": "python",
+      "args": [
+        "<path-to-repo>/PCAP_Analyser/mcp_server.py",
+        "--mcp"
+      ],
+      "env": {
+        "PYTHONPATH": "<path-to-repo>/PCAP_Analyser"
+      },
+      "description": "PCAP Network Flow Analysis Server",
+      "capabilities": {
+        "tools": true,
+        "resources": false,
+        "prompts": false
+      }
+    }
+  },
+  "usage": {
+    "description": "This MCP server provides network flow analysis capabilities for PCAP files.",
+    "tools": [
+      {
+        "name": "load_pcap_file",
+        "description": "Load and analyze a PCAP file",
+        "example": "Load the PCAP file ../ver_neg.pcap"
+      },
+      {
+        "name": "analyze_port_flows",
+        "description": "Analyze flows for a specific port",
+        "example": "Analyze the flows for port 41948"
+      },
+      {
+        "name": "analyze_ip_flows", 
+        "description": "Analyze flows for a specific IP address",
+        "example": "Show me flows for IP 192.168.0.10"
+      },
+      {
+        "name": "analyze_protocol_flows",
+        "description": "Analyze flows by protocol",
+        "example": "Analyze HTTPS protocol flows"
+      },
+      {
+        "name": "get_pcap_summary",
+        "description": "Get summary of loaded PCAP",
+        "example": "Show me a summary of the current PCAP"
+      }
+    ]
+  }
+}

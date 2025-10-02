@@ -1,0 +1,4 @@
+scapy==2.5.0
+mcp>=1.0.0
+asyncio-standard-library
+python-dateutil
